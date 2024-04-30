@@ -1,0 +1,16 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Simple EC2 Instance",
+  "Resources": {
+    "MyEC2Instance": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "ImageId": "ami-06b72b3b2a773be2b",
+        "InstanceType": "t2.micro",
+        "KeyName": "formaskypem",
+        "SecurityGroupIds": ["sg-0ad8d7c39232c6a6d"],
+        "Tags": [{ "Key": "Name", "Value": "MyEC2Instance" }]
+      }
+    }
+  }
+}
